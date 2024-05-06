@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto";
+    color: #fff;
+}
+header{
+    background-color: aqua;
+}
+main{
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.seccion-top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.logo, .text-intro{
+    flex: 1 0;
+    
+}
