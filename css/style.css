@@ -1,28 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
 body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    font-family: "Roboto";
+    font-family:"Montserrat", sans-serif;
     color: #fff;
+    font-size: 15px;
 }
-header{
+.h1{
+    font-family: "Fira Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    color: #000;
+    font-size: 2em;
+}
+.parrafo{
+    font-family:"Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.link{
+    
+}
+.header{
     background-color: aqua;
+    position: fixed;
+    width: 100%;
 }
-main{
+.navbar__ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+.navbar__ul__link{
+
+}
+.main{
     background-color: #000;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.seccion-top{
+.main .main__seccion{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    height: 100vh;
 }
-.logo, .text-intro{
+.main .main__seccion--gray{
+    background-color: #2E2D2D;
+}
+.main .main__seccion--white{
+    background-color: #fff;
+}
+.main .main__seccion--whitegray{
+    background-color: #D9D9D9;
+}
+.main__seccion .section__colum{
     flex: 1 0;
-    
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.main__seccion .section__colum--left{
+    background-color:#2E2D2D ;
+}
+.main__seccion .section__colum--right{
+    background-color: #D9D9D9;
 }
