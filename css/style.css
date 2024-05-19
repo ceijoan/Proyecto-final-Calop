@@ -67,6 +67,7 @@ body{
     flex-direction: column;
     align-items:center;
     justify-content: center;
+    padding: 10%;
 }
 .main__seccion .section__colum--left{
     background-color:#2E2D2D ;
