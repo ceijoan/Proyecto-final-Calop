@@ -1,67 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+:root{
+    --color-grisOscuro:#2E2D2D;
+    --color-negro:#000;
+    --color-blanco:#fff;
+    --color-rojo: #D71024;
+    --color-grisClaro:#D9D9D9;
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Fira Mono", monospace;
+}
 body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     font-family:"Montserrat", sans-serif;
     color: #fff;
     font-size: 15px;
 }
-.h1{
-    font-family: "Fira Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-    color: #000;
-    font-size: 2em;
-}
-.parrafo{
-    font-family:"Montserrat", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-.link{
-    
-}
-.header{
-    background-color: aqua;
+/*Aqui inicia el header*/
+.Header{
     position: fixed;
     width: 100%;
+    padding: 20px 0;
 }
-.navbar__ul{
+.Header-nav{
+    
+}
+.Header-menu{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    list-style: none;
-    gap: 20px;
+    gap: 0 30px;
 }
-.navbar__ul__link{
+.Header-li{
+    list-style: none;
+    
+}
+.Header-link{
+    text-decoration: none;
+    color: var(--color-blanco);
+    cursor: pointer;
+}
+.Header-link--isActive, .Header-link:hover{
+    color: var(--color-rojo);
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+.Header-link--isActive::after{
+    content: "   ______________";
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: -5px;
+    transition: color 4s ease-out;
+}
+/*Aquí Termina el header*/
+/*Aqui creo los elementos que flotan como las flechas y los cuadros rojos*/
+.Float{
+    position: absolute;
+}
+.Float-flecha--izq{
+    width: 30px;
+    height: 120px;
+    top: 30%;
+    left: 5%;
+    background-image: url(../images/flechas-icon-calop.webp);
+    background-size: contain;
 
 }
-.main{
-    background-color: #000;
+.Float-flecha--der{
+    width: 30px;
+    height: 240px;
+    bottom: -25%;
+    right: 5%;
+    background-image: url(../images/flechas-icon-calop.webp);
+    background-size: contain;
+}
+.Float-minBox--center{
+    width: 10%;
+    height: 10vh;
+    background-color: #d7102477;
+    top: 50%;
+    left: 50%;
+    translate:-50%;
+}
+.Float-bigBox--center{
+    width: 40%;
+    height: 10vh;
+    background-color: #d7102477;
+    bottom: -5%;
+    left: 50%;
+    translate:-50%;
+}
+/*Aquí inicia el Main*/
+.Main{
+    background-color: var(--color-blanco);
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.main .main__seccion{
+.Seccion{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: 100vh;
+    
 }
-.main .main__seccion--gray{
-    background-color: #2E2D2D;
+.Seccion-2colum{
+   flex-direction: row;
+   align-items: stretch;
 }
-.main .main__seccion--white{
-    background-color: #fff;
+.Seccion--bgWhite{
+    background-color: var(--color-blanco);
 }
-.main .main__seccion--whitegray{
-    background-color: #D9D9D9;
+.Seccion--bgGray{
+    background-color: var(--color-grisOscuro);
 }
-.main__seccion .section__colum{
+.Seccion--bgWhitegray{
+    background-color: var(--color-grisClaro);
+}
+.Section-contentColumn{
     flex: 1 0;
     display: flex;
     flex-direction: column;
@@ -69,9 +124,28 @@ body{
     justify-content: center;
     padding: 10%;
 }
-.main__seccion .section__colum--left{
-    background-color:#2E2D2D ;
+.Section-contentColumn .Section-img{
+    width: 100%;
 }
-.main__seccion .section__colum--right{
-    background-color: #D9D9D9;
+
+.Section-h1{
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-style: normal;
+    color: var(--color-negro);
+    font-size: 2rem;
 }
+
+.Section-parrafo{
+    font-family:var(--font-primary);
+    font-weight: 400;
+    font-style: normal;
+    color: var(--color-negro);
+    font-size: 1rem;
+}
+.Section-parrafo--blanco{
+    color: var(--color-blanco);
+
+}
+
+
