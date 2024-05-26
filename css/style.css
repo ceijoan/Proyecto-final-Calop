@@ -16,11 +16,13 @@ body{
     color: #fff;
     font-size: 15px;
 }
+
 /*Aqui inicia el header*/
 .Header{
     position: fixed;
     width: 100%;
     padding: 20px 0;
+    z-index: 1;
 }
 .Header-nav{
     
@@ -117,6 +119,10 @@ body{
     position: relative;
     
 }
+/*Esta clase es para que la seccion sea tan alto como su propio contenido*/
+.Seccion--Expand{
+    height: auto;
+}
 .Seccion-2colum{
    flex-direction: row;
    align-items: stretch;
@@ -133,6 +139,14 @@ body{
 }
 /*Fin Secciones con fodos de otros colores*/
 /*Clases de las secciones*/ 
+.Section-NoImportantColumn{
+    flex: 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+    padding: 10%;
+}
 .Section-contentColumn{
     flex: 1 0;
     display: flex;
@@ -148,20 +162,24 @@ body{
 .Section-contentColumn .Section-img{
     width: 100%;
 }
-
+/*Fuentes generales del proyecto*/
 .Section-h1{
     font-family: var(--font-secondary);
     font-weight: 700;
-    font-style: normal;
     color: var(--color-negro);
     font-size: 2rem;
 }
 .Section-h2{
     font-family: var(--font-secondary);
     font-weight: 700;
-    font-style: normal;
     color: var(--color-negro);
     font-size: 1.5rem;
+}
+.Section-h3{
+    font-family: var(--fosecondarynt-);
+    font-weight: 700;
+    color: var(--color-grisClaro);
+    font-size: 2.2rem;
 }
 
 .Section-parrafo{
@@ -171,19 +189,150 @@ body{
     color: var(--color-negro);
     font-size: 1rem;
 }
-.Section-parrafo--blanco{
-    color: var(--color-blanco);
 
-}
 /* Fin Clases de las secciones*/
 
 /*Inicio de estilos para acordeon*/
 .Section-Acordeon{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.Section-Acordeonli{
+    position: relative;
 }
 .AcordeonTitle{
-   border: 1px solid var(--color-rojo);
+    border-top: 1px solid var(--color-rojo);
+    border-bottom: 1px solid var(--color-rojo);
+    align-items: stretch;
+    padding: 5% 0;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.AcordeonTitle::before{
+    content: "+";
+    color: var(--color-rojo);
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    left: -20px;
+    top: 35%;
 }
 .AcordeonDespliega{
     display: none;
+}
+.isActive{
+    display: block;
+    transition: 2s ease-in;
+}
+/*FIN de estilos para acordeon*/
+
+/*Inicio de estilos para Slider*/
+.content-slider{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+}
+.slider{
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    height:80vh ;
+}
+.slider-contetImg{
+    flex: 0 0 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    overflow: hidden;
+    gap: 20px;
+}
+.slider-box{
+    flex: 0 0 20%;
+    display: flex;
+    align-items: end;
+}
+
+
+.slider-img{
+    width: 100%;
+    height: 40%;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.slider-box:nth-child(5) .slider-img{
+    background-image: url(../images/brand-img-slider.webp);
+    background-size: cover;
+}
+.slider-box:nth-child(4) .slider-img{
+    background-image: url(../images/social-img-slider.webp);
+    background-size: cover;
+}
+.slider-box:nth-child(3) .slider-img{
+    background-image: url(../images/diseñoweb-img-slider.webp);
+    background-size: cover;
+}
+.slider-box:nth-child(2) .slider-img{
+    background-image: url(../images/strategia-img-slider.webp);
+    background-size: cover;
+}
+.slider-box:nth-child(1) .slider-img{
+    background-image: url(../images/brand-img-slider.webp);
+    background-size: cover;
+}
+
+.isExpand{
+    height: 100%;
+    transition: height ease-in 2s ;
+}
+
+.slider-contentText{
+    flex: 0 0 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.slider-txtContentBox{
+    font-size: 2rem;
+    text-align: center;
+}
+.slider-sliderText{
+    color: var(--color-negro);
+    display: none;
+}
+.slider-isActive{
+    display: block;
+}
+.slider-sliderTitle{
+    font-family: var(--font-secondary);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.slider-sliderParrafo{
+    font-family: var(--font-primary);
+    font-size: 1rem;
+}
+
+/*Aqui agrego algunas utilidades*/
+.u-alingTxtLeft{
+    text-align: left;
+}
+/*.Section-parrafo--blanco*/
+.u-colorBlanco{
+    color: var(--color-blanco);
+}
+.u-colorGrisOscuro{
+    color: var(--color-grisOscuro);
+}
+.u-colorGrisClaro{
+    color:var(--color-grisClaro);
+}
+.u-txtRojo{
+    color:var(--color-rojo);
 }
