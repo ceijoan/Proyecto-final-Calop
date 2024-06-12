@@ -14,7 +14,7 @@ body{
     flex-direction: column;
     font-family:"Montserrat", sans-serif;
     color: #fff;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 /*Aqui inicia el header*/
@@ -23,9 +23,6 @@ body{
     width: 100%;
     padding: 20px 0;
     z-index: 1;
-}
-.Header-nav{
-    
 }
 .Header-menu{
     display: flex;
@@ -137,7 +134,7 @@ body{
 .Seccion--bgWhitegray{
     background-color: var(--color-grisClaro);
 }
-/*Fin Secciones con fodos de otros colores*/
+/*Fin Secciones con fondos de otros colores*/
 /*Clases de las secciones*/ 
 .Section-NoImportantColumn{
     flex: 0 0;
@@ -155,6 +152,12 @@ body{
     justify-content: center;
     padding: 10%;
 }
+.Section-contentComplete{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5% 10%;
+}
 .Section-contentColumn--alingLeft{
     align-items: flex-start;
     padding:10% 15% 10% 0;
@@ -167,13 +170,13 @@ body{
     font-family: var(--font-secondary);
     font-weight: 700;
     color: var(--color-negro);
-    font-size: 2rem;
+    font-size: 3rem;
 }
 .Section-h2{
     font-family: var(--font-secondary);
     font-weight: 700;
     color: var(--color-negro);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .Section-h3{
     font-family: var(--fosecondarynt-);
@@ -215,7 +218,7 @@ body{
 .AcordeonTitle::before{
     content: "+";
     color: var(--color-rojo);
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 700;
     position: absolute;
     left: -20px;
@@ -231,19 +234,13 @@ body{
 /*FIN de estilos para acordeon*/
 
 /*Inicio de estilos para Slider*/
-.content-slider{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 5% 10%;
-}
-.slider{
+.Slider{
     display: flex;
     flex-direction: row; 
     gap: 20px;
     height:80vh ;
 }
-.slider-contetImg{
+.Slider-contetImg{
     flex: 0 0 65%;
     display: flex;
     flex-direction: row;
@@ -251,14 +248,14 @@ body{
     overflow: hidden;
     gap: 20px;
 }
-.slider-box{
+.Slider-box{
     flex: 0 0 20%;
     display: flex;
     align-items: end;
 }
 
 
-.slider-img{
+.Slider-img{
     width: 100%;
     height: 40%;
     background-color: red;
@@ -266,23 +263,23 @@ body{
     align-items: center;
 }
 
-.slider-box:nth-child(5) .slider-img{
+.Slider-box:nth-child(5) .Slider-img{
     background-image: url(../images/brand-img-slider.webp);
     background-size: cover;
 }
-.slider-box:nth-child(4) .slider-img{
+.Slider-box:nth-child(4) .Slider-img{
     background-image: url(../images/social-img-slider.webp);
     background-size: cover;
 }
-.slider-box:nth-child(3) .slider-img{
+.Slider-box:nth-child(3) .Slider-img{
     background-image: url(../images/diseñoweb-img-slider.webp);
     background-size: cover;
 }
-.slider-box:nth-child(2) .slider-img{
+.Slider-box:nth-child(2) .Slider-img{
     background-image: url(../images/strategia-img-slider.webp);
     background-size: cover;
 }
-.slider-box:nth-child(1) .slider-img{
+.Slider-box:nth-child(1) .Slider-img{
     background-image: url(../images/brand-img-slider.webp);
     background-size: cover;
 }
@@ -292,32 +289,59 @@ body{
     transition: height ease-in 2s ;
 }
 
-.slider-contentText{
+.Slider-contentText{
     flex: 0 0 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.slider-txtContentBox{
+.Slider-txtContentBox{
     font-size: 2rem;
     text-align: center;
 }
-.slider-sliderText{
+.Slider-sliderText{
     color: var(--color-negro);
     display: none;
 }
-.slider-isActive{
+.Slider-isActive{
     display: block;
 }
-.slider-sliderTitle{
+.Slider-sliderTitle{
     font-family: var(--font-secondary);
     font-size: 1.3rem;
     font-weight: 600;
 }
-.slider-sliderParrafo{
+.Slider-sliderParrafo{
     font-family: var(--font-primary);
     font-size: 1rem;
 }
+/*Inicio de estilos para Slider Proyectos*/
+.SliderProyectos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+.SliderProyectos--contentText{
+    background-color: #fff;
+    width: 50%;
+    height: 40vh;
+}
+.SliderProyectos--titulo{
+
+}
+.SliderProyectos--descripcion{
+
+}
+.SliderProyectos--contentImagen{
+    
+}
+.SliderProyectos--Flechas{
+
+}
+
+
 
 /*Aqui agrego algunas utilidades*/
 .u-alingTxtLeft{
