@@ -158,6 +158,9 @@ body{
     flex-wrap: wrap;
     padding: 5% 10%;
 }
+.--nopadding{
+    padding: 0;
+}
 .Section-contentColumn--alingLeft{
     align-items: flex-start;
     padding:10% 15% 10% 0;
@@ -170,7 +173,8 @@ body{
     font-family: var(--font-secondary);
     font-weight: 700;
     color: var(--color-negro);
-    font-size: 3rem;
+    font-size: 2rem;
+    text-align: center;
 }
 .Section-h2{
     font-family: var(--font-secondary);
@@ -183,6 +187,7 @@ body{
     font-weight: 700;
     color: var(--color-grisClaro);
     font-size: 2.2rem;
+    margin: 5% 10% 0;
 }
 
 .Section-parrafo{
@@ -196,20 +201,21 @@ body{
 /* Fin Clases de las secciones*/
 
 /*Inicio de estilos para acordeon*/
-.Section-Acordeon{
+.Acordeon{
     list-style: none;
     display: flex;
     flex-direction: column;
     width: 100%;
 }
-.Section-Acordeonli{
+.Acordeonli{
     position: relative;
 }
+
 .AcordeonTitle{
     border-top: 1px solid var(--color-rojo);
     border-bottom: 1px solid var(--color-rojo);
     align-items: stretch;
-    padding: 5% 0;
+    padding: 2% 0;
     position: relative;
     cursor: pointer;
     font-size: 1.3em;
@@ -218,18 +224,19 @@ body{
 .AcordeonTitle::before{
     content: "+";
     color: var(--color-rojo);
-    font-size: 1.3rem;
+    font-size: 2rem;
     font-weight: 700;
     position: absolute;
     left: -20px;
-    top: 35%;
+    top: 15px;
 }
+
 .AcordeonDespliega{
     display: none;
 }
-.isActive{
+.is-Active .AcordeonDespliega{
     display: block;
-    transition: 2s ease-in;
+    /* transition: 2s ease-in; */
 }
 /*FIN de estilos para acordeon*/
 
@@ -243,7 +250,7 @@ body{
 .Slider-contetImg{
     flex: 0 0 65%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: flex-end;
     overflow: hidden;
     gap: 20px;
@@ -252,6 +259,7 @@ body{
     flex: 0 0 20%;
     display: flex;
     align-items: end;
+    translate: -85px;
 }
 
 
@@ -287,6 +295,7 @@ body{
 .isExpand{
     height: 100%;
     transition: height ease-in 2s ;
+   
 }
 
 .Slider-contentText{
@@ -322,25 +331,74 @@ body{
     flex-direction: row;
     overflow: hidden;
     flex-wrap: nowrap;
+    position: relative;
+    align-items: end;
+    justify-content: end;
 }
-.SliderProyectos--contentText{
+.SliderProyectos-contentText{
     background-color: #fff;
-    width: 50%;
-    height: 40vh;
+    width: 30%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 5%;
+    justify-content: center;
+    position:absolute;
+    left: 15%;
+    bottom: 5%;
 }
-.SliderProyectos--titulo{
-
+.SliderProyectos-titulo{
+    color: var(--color-negro);
+    font-size: 2rem;
+    text-align: right;
 }
-.SliderProyectos--descripcion{
-
+.SliderProyectos-descripcion{
+    color: var(--color-grisOscuro);
+    font-size: 1rem;
+    text-align: right;
 }
-.SliderProyectos--contentImagen{
+.SliderProyectos-contentImagen{
     
 }
-.SliderProyectos--Flechas{
-
+.SliderProyectos-btnProyecto{
+    background: var(--color-grisOscuro);
+    color: var(--color-blanco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: 0 10px;
+    cursor: pointer;
 }
-
+.SliderProyectos-btnProyecto:hover{
+    background: var(--color-rojo);
+    text-decoration: underline;
+}
+.SliderProyectos-Flechas{
+    position: absolute;
+    top: 50%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.Slider-prev, .Slider-next{
+    background: #d7102491;
+    border: none;
+    color: var(--color-blanco);
+    font-weight: 300;
+    font-size: 2.5rem;
+    cursor: pointer;
+    letter-spacing: -6px;
+    
+}
+.Slider-prev{
+    left: 0;
+    padding: 5px 10px 5px 20px;
+}
+.Slider-next{
+    right: 0;
+    padding: 5px 20px 5px 10px;
+}
 
 
 /*Aqui agrego algunas utilidades*/
