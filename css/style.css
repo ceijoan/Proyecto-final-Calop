@@ -280,7 +280,7 @@ body{
     background-size: cover;
 }
 .Slider-box:nth-child(3) .Slider-img{
-    background-image: url(../images/diseñoweb-img-slider.webp);
+    background-image: url(../images/disenoweb-img-slider.webp);
     background-size: cover;
 }
 .Slider-box:nth-child(2) .Slider-img{
@@ -418,3 +418,21 @@ body{
 .u-txtRojo{
     color:var(--color-rojo);
 }
+
+
+/*-----------------------------NO TENER EN CUENTA AJUSTAR-----------------------*/
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+  
+  .Slider-box {
+    min-width: 150px;
+    margin-right: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
